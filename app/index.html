@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Random Site Explorer — App</title>
+<link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+<div id="loader" class="loader">Loading…</div>
+<canvas id="particles"></canvas>
+<main id="app" class="app hidden">
+  <header class="app-header">
+    <h1>Random Site Explorer</h1>
+    <div class="controls">
+      <select id="categorySelect"><option value="all">All</option></select>
+      <button id="surpriseBtn">🎲 Surprise Me</button>
+      <button id="favBtn">⭐ Favorites</button>
+      <label class="toggle"><input id="darkToggle" type="checkbox"/> Dark</label>
+    </div>
+  </header>
+
+  <section id="clickArea" class="click-area">
+    <div class="text-container">
+      <h2>Click Anywhere</h2>
+      <p class="subtitle">Discover random websites</p>
+      <p class="category-info"><span id="totalSites">0</span> sites • <span id="categoryName">All</span></p>
+    </div>
+    <p class="click-hint">👆 Click to explore</p>
+  </section>
+
+  <aside class="stats">
+    <div>Clicks: <span id="clickCount">0</span></div>
+    <div>Favorites: <span id="favCount">0</span></div>
+    <div id="adSlot" class="ad-slot">AdSense Placeholder</div>
+  </aside>
+</main>
+
+<script src="modules/particles.js"></script>
+<script src="modules/gsap.min.js"></script>
+<script src="modules/ai.js"></script>
+<script src="modules/favorites.js"></script>
+<script src="modules/analytics.js"></script>
+<script src="modules/trending.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
